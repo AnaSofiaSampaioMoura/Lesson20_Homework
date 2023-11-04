@@ -1,0 +1,558 @@
+{
+	"info": {
+		"_postman_id": "28dc1b47-7b21-4978-a9c3-d81855a95987",
+		"name": "Home Assignment / Lesson 18 - Question 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30842417"
+	},
+	"item": [
+		{
+			"name": "Create - User 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = JSON.parse(responseBody);\r",
+							"const id = jsonData.id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"id\",id);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.not.have.body(\"No users found\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Charlotte Brown\",\r\n    \"age\":\"22\",\r\n    \"gender\":\"female\",\r\n    \"city\":\"Bath\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create - User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = JSON.parse(responseBody);\r",
+							"const id = jsonData.id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"id\",id);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.not.have.body(\"No users found\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"James Thomas\",\r\n    \"age\":\"32\",\r\n    \"gender\":\"male\",\r\n    \"city\":\"Cambridge\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create - User 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = JSON.parse(responseBody);\r",
+							"const id = jsonData.id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"id\",id);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.not.have.body(\"No users found\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?name=harry jones&age=40&gender=male&city=bristol",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "harry jones"
+						},
+						{
+							"key": "age",
+							"value": "40"
+						},
+						{
+							"key": "gender",
+							"value": "male"
+						},
+						{
+							"key": "city",
+							"value": "bristol"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - User 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = JSON.parse(responseBody);\r",
+							"const id = jsonData.id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"id\",id);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.not.have.body(\"No users found\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Emily Burton\",\r\n    \"age\":38,\r\n    \"gender\":\"female\",\r\n    \"city\":\"Liverpool\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id={{50064240-eeec-4902-af4e-b3baeec3568f}}",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{50064240-eeec-4902-af4e-b3baeec3568f}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = JSON.parse(responseBody);\r",
+							"const id = jsonData.id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"id\",id);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.not.have.body(\"No users found\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Emily Burton\",\r\n    \"age\":38,\r\n    \"gender\":\"female\",\r\n    \"city\":\"Liverpool\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id={{b9b54e28-e849-4537-ba5d-f0028a8e18ea}}",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{b9b54e28-e849-4537-ba5d-f0028a8e18ea}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit - User 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = JSON.parse(responseBody);\r",
+							"const id = jsonData.id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"id\",id);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.not.have.body(\"No users found\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"age\": 22,\r\n    \"city\": \"London\",\r\n    \"gender\": \"female\",\r\n    \"name\": \"Charlotte Lily Brown\",\r\n    \"id\": \"50064240-eeec-4902-af4e-b3baeec3568f\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit - User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = JSON.parse(responseBody);\r",
+							"const id = jsonData.id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"id\",id);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.not.have.body(\"No users found\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"age\": 32,\r\n    \"city\": \"London\",\r\n    \"gender\": \"Male\",\r\n    \"name\": \"James Oliver Thomas\",\r\n    \"id\": \"b9b54e28-e849-4537-ba5d-f0028a8e18ea\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete - User 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = JSON.parse(responseBody);\r",
+							"const id = jsonData.id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"id\",id);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.not.have.body(\"No users found\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id={{50064240-eeec-4902-af4e-b3baeec3568f}}",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{50064240-eeec-4902-af4e-b3baeec3568f}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete - User 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const jsonData = JSON.parse(responseBody);\r",
+							"const id = jsonData.id;\r",
+							"\r",
+							"pm.collectionVariables.set(\"id\",id);\r",
+							"\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Status test\", function () {\r",
+							"pm.response.to.not.have.body(\"No users found\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Emily Burton\",\r\n    \"age\":38,\r\n    \"gender\":\"female\",\r\n    \"city\":\"Liverpool\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://em.staging.api.onereach.ai/http/1b3bebb7-e882-4f1e-a74b-ee381bfa69d6/users?id={{b9b54e28-e849-4537-ba5d-f0028a8e18ea}}",
+					"protocol": "https",
+					"host": [
+						"em",
+						"staging",
+						"api",
+						"onereach",
+						"ai"
+					],
+					"path": [
+						"http",
+						"1b3bebb7-e882-4f1e-a74b-ee381bfa69d6",
+						"users"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{b9b54e28-e849-4537-ba5d-f0028a8e18ea}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": ""
+		},
+		{
+			"key": "fcc98083-71b0-4ba4-b0f8-4a4c3b44e131",
+			"value": "0"
+		},
+		{
+			"key": "efef840d-784d-4515-b4f8-72a05e976267",
+			"value": "0"
+		}
+	]
+}
