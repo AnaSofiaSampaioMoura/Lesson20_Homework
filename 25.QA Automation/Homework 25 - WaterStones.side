@@ -1,0 +1,427 @@
+{
+  "id": "3ec78619-876c-41c3-a943-a507db0935a3",
+  "version": "2.0",
+  "name": "Homework 25 - WaterStones",
+  "url": "https://www.waterstones.com/",
+  "tests": [{
+    "id": "357aa6f1-64ae-4674-8faf-ad092e2f190c",
+    "name": "Test Case 1: Browse Book Categories",
+    "commands": [{
+      "id": "84349136-f397-4d98-b220-f351e0747372",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.waterstones.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b1da037-813b-4011-81fa-70eed04919c8",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Buy books, stationery and gifts, online and in store | Waterstones",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4e6e0c1-2282-47ba-afb7-55d6343e80ac",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=li:nth-child(4) > .nav-item-books",
+      "targets": [],
+      "value": "BOOKS"
+    }, {
+      "id": "f1471064-dab9-43fb-b973-2ff0d87eedb8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Bestsellers",
+      "targets": [],
+      "value": "Bestsellers"
+    }, {
+      "id": "2f921712-34e7-4846-bcf5-1e5f9644e465",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Best selling books | Waterstones",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1cd1eb75-6a4b-4680-b88e-1bbef5e7c9e2",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "xpath=//a[contains(@class, 'title') and contains(@class, 'link-invert') and contains(@class, 'dotdotdot') and contains(@class, 'ddd-truncated')]",
+      "targets": [],
+      "value": "ddd-truncated"
+    }, {
+      "id": "056f0c93-fe92-498d-8a15-26e942fa13d8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Tomorrow, and…",
+      "targets": [],
+      "value": "Tomorrow, and…"
+    }, {
+      "id": "8d405596-16f8-4ea6-98c9-3b87cad4be1e",
+      "comment": "",
+      "command": "click",
+      "target": "css=#p_12172931 img",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51c5418b-550b-46fc-b666-0e9aa512e75b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=scope_book_title",
+      "targets": [],
+      "value": "Tomorrow, and Tomorrow, and Tomorrow (Paperback)"
+    }, {
+      "id": "35f20d39-ba61-4b21-a255-284ed5cb2910",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Waterstones",
+      "targets": [
+        ["linkText=Waterstones", "linkText"],
+        ["css=.logo", "css:finder"],
+        ["xpath=//a[contains(text(),'Waterstones')]", "xpath:link"],
+        ["xpath=//div[@id='main-logos']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[10]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Waterstones')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "23a8f852-6a48-4ac1-8af9-59143266ccd0",
+    "name": "Test Case 2: Add a Book to Cart",
+    "commands": [{
+      "id": "03fc5218-a205-424e-9aa5-c9c08e855989",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.waterstones.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03e4c48c-d8b0-46c1-87f7-5c296ced0186",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Buy books, stationery and gifts, online and in store | Waterstones",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68bd602e-44b2-4f0a-89b0-940dd967ffcc",
+      "comment": "",
+      "command": "type",
+      "target": "name=term",
+      "targets": [],
+      "value": "Hello Beautiful"
+    }, {
+      "id": "68cd77bc-dc40-4c59-823e-e49c4518de84",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-search-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2b9440c-0642-40ee-ac2f-0122e64b0351",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Hello Beautiful",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a18a5533-93b3-4563-80df-8950925ac22e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Hello Beautiful",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5e123ad-c131-4900-8ac2-833be9ade19f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=scope_book_title",
+      "targets": [],
+      "value": "Hello Beautiful (Hardback)"
+    }, {
+      "id": "0d9a76e5-0340-4247-b036-ff1ea23b1dc7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button-buy",
+      "targets": [],
+      "value": "linkText=Add to basket"
+    }, {
+      "id": "a5ef5bc2-d9c6-4b7c-833d-27768767166d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button-gold",
+      "targets": [],
+      "value": "linkText=View basket"
+    }, {
+      "id": "0335244c-1359-430e-81b5-01d205bddd4a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Hello Beautiful",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9f1f17c-85c1-4aa2-b9d8-b189290a14d3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//span[contains(@class, 'lblBasketTotalToPay') and contains(text(), '£13.99')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d0354e7-a4af-4226-9e7c-0f53715ba79f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btnCheckOutTablet > .btnBasketNext",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6522559e-75a2-4685-acfb-adec9afcf28b",
+    "name": "Test Case 3: Register for an Account",
+    "commands": [{
+      "id": "d01b625f-5ede-47b1-862a-e89d53d0ea0d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.waterstones.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74a873a3-3d1a-48af-858f-f6b3ded5c673",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Buy books, stationery and gifts, online and in store | Waterstones",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a9b1b63-16f3-499f-9bfc-2c38b5fe4748",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-account > .js-open-modal",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a39803f-6281-479e-9032-f35080a6c12e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=CREATE AN ACCOUNT",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49e40130-5910-4234-a6e2-a3cf07696a2e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.span6 > .heading-underline",
+      "targets": [],
+      "value": "New customer"
+    }, {
+      "id": "f34b9107-484f-4e67-8b96-087450b8b100",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button:nth-child(7)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70f4f802-1460-467c-95e2-b3d70c9ac5e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.trigger",
+      "targets": [],
+      "value": "Please select"
+    }, {
+      "id": "11ef1e4b-2044-4d51-8c7c-1bc418d91a21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"],
+        ["xpath=//form[@id='regform']/div/div[2]/div/div[2]/div/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/ul/li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'Miss')]", "xpath:innerText"]
+      ],
+      "value": "Miss"
+    }, {
+      "id": "025daab2-e927-4a65-8853-e4c687a29a3a",
+      "comment": "",
+      "command": "type",
+      "target": "name=user[firstname]",
+      "targets": [],
+      "value": "Sofia"
+    }, {
+      "id": "1a0f50db-be5e-4b1c-8ef8-05a9d67db46d",
+      "comment": "",
+      "command": "type",
+      "target": "name=user[lastname]",
+      "targets": [],
+      "value": "Moura"
+    }, {
+      "id": "4d8c7d22-47b9-413e-99e7-f151f5b0bbe1",
+      "comment": "",
+      "command": "type",
+      "target": "name=user[email]",
+      "targets": [],
+      "value": "sofiamoura7@hotmail.com"
+    }, {
+      "id": "491394f8-efee-4011-bae9-cf0811644c2e",
+      "comment": "",
+      "command": "type",
+      "target": "name=user[confirmEmail]",
+      "targets": [],
+      "value": "sofiamoura7@hotmail.com"
+    }, {
+      "id": "224d274b-830a-4d51-a2b3-91e1a5226fd7",
+      "comment": "",
+      "command": "type",
+      "target": "name=user[password]",
+      "targets": [],
+      "value": "lkKi72VzQOzDN@9"
+    }, {
+      "id": "1a0d3483-e234-4bad-a792-f18a56f17e25",
+      "comment": "",
+      "command": "type",
+      "target": "name=user[password_confirm]",
+      "targets": [],
+      "value": "lkKi72VzQOzDN@9"
+    }, {
+      "id": "96e8029b-bed6-47fc-a42f-a84d5bc92130",
+      "comment": "",
+      "command": "click",
+      "target": "css=.reduced-margin > .ws-checkable-outer",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd1a852d-1107-4732-8b54-e263437fda9a",
+      "comment": "",
+      "command": "click",
+      "target": "id=register",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8c000314-ac2c-490b-b842-3682477cf95b",
+    "name": "1",
+    "commands": [{
+      "id": "b812040d-e9f2-44e4-8d37-02cb3cbdaf43",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.waterstones.com/registration/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d95b2c38-0a41-474a-aa46-49125c576025",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96655d54-4394-4bb8-acef-b234b084bf70",
+      "comment": "",
+      "command": "click",
+      "target": "css=.trigger",
+      "targets": [
+        ["css=.trigger", "css:finder"],
+        ["xpath=//form[@id='regform']/div/div[2]/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "365844a9-55cb-4e7e-b941-c1fb0b6598a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"],
+        ["xpath=//form[@id='regform']/div/div[2]/div/div[2]/div/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/ul/li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'Miss')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c26257fa-4635-47a9-b2f4-607040434374",
+      "comment": "",
+      "command": "click",
+      "target": "css=.trigger",
+      "targets": [
+        ["css=.trigger", "css:finder"],
+        ["xpath=//form[@id='regform']/div/div[2]/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d11ced51-d008-46b2-a5fb-a17701adb1b5",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"],
+        ["xpath=//form[@id='regform']/div/div[2]/div/div[2]/div/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/ul/li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'Miss')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7657f6a-56eb-4dc2-a03d-226322ee5173",
+      "comment": "",
+      "command": "assertValue",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"],
+        ["xpath=//form[@id='regform']/div/div[2]/div/div[2]/div/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/ul/li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'Miss')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "15237ac6-806d-400d-a475-452095191134",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"],
+        ["xpath=//form[@id='regform']/div/div[2]/div/div[2]/div/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/ul/li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'Miss')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e67a4c8-6d7b-45b9-8c91-5f524d7816d9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"],
+        ["xpath=//form[@id='regform']/div/div[2]/div/div[2]/div/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/ul/li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'Miss')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25f0c25d-61b1-4d67-bb6d-cfe7b79e5e3c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"],
+        ["xpath=//form[@id='regform']/div/div[2]/div/div[2]/div/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/ul/li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'Miss')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b83cd12e-9eb5-4b29-9331-7f8ac3c9102c",
+      "comment": "",
+      "command": "verifySelectedLabel",
+      "target": "css=.hover",
+      "targets": [],
+      "value": "Miss"
+    }]
+  }],
+  "suites": [{
+    "id": "1478418c-b2aa-4f15-b024-ac93d5880a05",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.waterstones.com/", "https://www.waterstones.com/registration/"],
+  "plugins": []
+}
